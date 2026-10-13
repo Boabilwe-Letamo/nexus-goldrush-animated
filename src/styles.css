@@ -194,6 +194,11 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .scroll-link svg {color:var(--primary);animation:arrow-drift 2s infinite;}
 .hero-trace {position:absolute;right:20%;bottom:10%;width:35%;height:38%;border:1px solid color-mix(in oklab,var(--primary) 18%,transparent);border-radius:50%;transform:rotateX(65deg) rotateZ(-25deg);pointer-events:none;}
 .hero-trace:after {content:'';position:absolute;inset:18px;border:1px solid color-mix(in oklab,var(--primary) 15%,transparent);border-radius:50%;}
+.hero-flow {position:absolute;top:98px;right:0;width:65%;height:min(780px,calc(100svh - 98px));min-height:690px;pointer-events:none;z-index:1;}
+@media(min-width:1600px) {.hero-flow {height:790px;}}
+@media(max-width:1150px) {.hero-flow {min-height:650px;}}
+@media(max-width:900px) {.hero-flow {top:80px;height:720px;}}
+@media(max-width:600px) {.hero-flow {height:700px;min-height:0;width:100%;opacity:.65;}}
 .corridor-bar {border-block:1px solid var(--border);background:var(--card);}
 .corridor-inner {display:flex;align-items:center;justify-content:space-between;padding-block:23px;gap:24px;}
 .corridor-inner>span {font-size:10px;color:var(--muted-foreground);text-transform:uppercase;letter-spacing:1.5px;}

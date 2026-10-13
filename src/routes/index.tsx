@@ -1,24 +1,23 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { lazy, Suspense } from 'react';
+import { ArrowUpRight, ArrowDown, ArrowRight, MoveRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ContactBand, ProfileLink } from '@/components/SiteShell';
+import { leaders, solutions, pageHead } from '@/lib/company';
+import hero from '@/assets/freight-hero.jpg';
+const TradeNetwork = lazy(() => import('@/components/TradeNetwork'));
+const HeroFlow = lazy(() => import('@/components/HeroFlow'));
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute('/')({
+  head: () => pageHead('Beyond Borders', 'Nexus Logistica moves Africa’s resources beyond borders through integrated logistics, trade facilitation, and sustainable supply chains.'),
   component: Index,
 });
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <main><section className="hero"><img className="hero-photo" src={hero} alt="Freight transport on a Southern African highway — illustrative image" width={1920} height={1024} fetchPriority="high" /><div className="container hero-content"><span className="eyebrow hero-eyebrow">Botswana roots. Continental vision.</span><h1>Nexus Logistica.<br />Moving Africa.<br /><span>Beyond borders.</span></h1><p>Integrated logistics. Seamless trade.<br />We connect Africa’s resources to the world — with precision, purpose, and possibility.</p><div className="hero-actions"><Button asChild variant="gold"><Link to="/solutions">Explore our solutions <ArrowUpRight /></Link></Button><Button asChild variant="glass"><Link to="/contact">Partner with us <ArrowUpRight /></Link></Button></div></div><div className="hero-trace" aria-hidden="true" /><div className="container hero-bottom"><a className="scroll-link" href="#expertise">Discover Nexus <ArrowDown size={20} /></a><div className="hero-caption"><span>Built for the continent</span><p>Connecting industry. Enabling growth.</p></div></div></section>
+  <Suspense fallback={null}><HeroFlow /></Suspense>
+  <div className="corridor-bar"><div className="container corridor-inner"><span>One connected vision</span><div><span>Botswana</span><MoveRight /><span>Southern Africa</span><MoveRight /><span>African markets</span><MoveRight /><span>Global opportunity</span></div><span>We think way beyond borders</span></div></div>
+  <section className="section container" id="expertise"><div className="section-heading"><div><span className="eyebrow">Our expertise</span><h2>Every movement.<br />A smarter solution.</h2></div><Link className="text-action" to="/solutions">Discover our solutions <ArrowUpRight size={17} /></Link></div><div className="solutions-grid">{solutions.map(s => <Link to="/solutions" key={s.number} className="solution-card"><div className="solution-card-top"><s.icon /><span>{s.number}</span></div><h3>{s.title}</h3><p>{s.description}</p><ArrowUpRight /></Link>)}</div></section>
+  <section className="network-section"><div className="container network-layout"><div className="network-content"><span className="eyebrow">Our reach. Your advantage.</span><h2>Rooted in Botswana.<br /><span className="text-primary">Connected to Africa.</span></h2><p>From production zones to consumer markets, we bring infrastructure, industry, and innovation together. Our integrated approach turns complex supply chains into pathways for growth.</p><Link className="text-action" to="/about">The company behind the connection <ArrowUpRight size={17} /></Link></div><div><Suspense fallback={<div className="network-canvas" />}><TradeNetwork /></Suspense><div className="network-labels"><span>● Botswana</span><span>Regional connections</span><span>SADC</span></div></div></div><div className="container principles-row"><div><h3>Precision in every process</h3><p>Operational accuracy. Regulatory confidence.</p></div><div><h3>Partnership at our core</h3><p>Connecting expertise to shared opportunity.</p></div><div><h3>Progress with responsibility</h3><p>Sustainable pathways for lasting value.</p></div></div></section>
+  <section className="section container"><div className="section-heading"><div><span className="eyebrow">The people moving us forward</span><h2>Vision. Expertise. Leadership.</h2></div><Link className="text-action" to="/leadership">Meet our leadership <ArrowUpRight size={17} /></Link></div><div className="leadership-grid">{leaders.map(l=><Link to="/leadership" className="leader-card" key={l.name}><div className="leader-photo"><img src={l.image} alt={l.name} width={660} height={730} loading="lazy" /><span>{l.short}</span></div><h3>{l.name}</h3><p className="role">{l.role}</p></Link>)}</div></section>
+  <section className="quote-section"><div className="container"><span className="eyebrow">Our purpose</span><blockquote>“Nexus Logistica is not just a logistics company — it’s an economic enabler. We are building the infrastructure of trade, trust, and transformation.”</blockquote><span className="eyebrow">Boabilwe Larona Letamo · Co-Founder & CEO</span></div></section><section className="section container"><div className="section-heading"><div><span className="eyebrow">Beyond the movement</span><h2>Trade that creates<br /><span className="text-primary">a better tomorrow.</span></h2></div><ProfileLink /></div><p className="max-w-2xl text-muted-foreground">Carbon-conscious routing. Local hiring and training. Ethical procurement. Our commitment to sustainable growth is built into the way we do business.</p><Link className="text-action mt-6" to="/sustainability">Our sustainability commitment <ArrowRight size={17} /></Link></section><ContactBand /></main>;
 }

@@ -1,0 +1,6 @@
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { solutions, pageHead } from '@/lib/company';
+import { ContactBand } from '@/components/SiteShell';
+export const Route=createFileRoute('/solutions')({head:()=>pageHead('Our Solutions','Integrated transport, customs pre-clearance, mining logistics, and sustainable supply chain solutions across Southern Africa.'),component:Solutions});
+function Solutions(){return <main><section className="page-intro"><div className="container"><span className="eyebrow">Our solutions</span><h1>Complex logistics.<br /><span className="text-primary">Connected solutions.</span></h1><p>From regional freight to mine-to-market pathways, we bring together the expertise, systems, and partnerships that keep trade moving.</p></div></section><section className="section container">{solutions.map(s=><article className="solution-detail" key={s.number}><span className="number">{s.number}</span><div><h2>{s.title}</h2><p>{s.detail}</p><Link className="text-action" to="/contact">Discuss your requirements <ArrowUpRight size={17} /></Link></div><img src={s.image} alt={`${s.title} — company profile imagery`} loading="lazy" width={800} height={470} /></article>)}</section><ContactBand /></main>}

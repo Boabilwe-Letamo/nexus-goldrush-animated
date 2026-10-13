@@ -8,3 +8,7 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep company content in a shared browser-safe content module and public pages as individual TanStack routes so navigation and page metadata remain distinct.
+- Render the interactive trade-network canvas only after hydration, with reduced-motion support and a static fallback, so public content remains readable without WebGL.
+- Use Lovable asset pointers for uploaded company media and a bundled generated photograph for the illustrative freight scene; do not imply the photograph depicts the company's actual fleet.

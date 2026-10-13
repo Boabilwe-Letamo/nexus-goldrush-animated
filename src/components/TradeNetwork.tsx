@@ -10,13 +10,13 @@ function Network({ gold, ink, still }: { gold: string; ink: string; still: boole
   const time = useRef(0);
   const dummy = useMemo(() => new THREE.Object3D(), []);
   const shape = useMemo(() => {
-    const coords = [[-2.5,2.8],[-1.8,3.5],[-.5,3.6],[.4,3.3],[1.5,3.35],[1.8,2.8],[2.3,1.7],[3,1.3],[2.4,.7],[1.8,.1],[1.45,-1.2],[.8,-2.5],[.2,-3.4],[-.4,-3.1],[-.9,-1.5],[-1.5,-.4],[-1.5,.5],[-2.4,.8],[-2.9,1.7]];
+    const coords: [number, number][] = [[-2.5,2.8],[-1.8,3.5],[-.5,3.6],[.4,3.3],[1.5,3.35],[1.8,2.8],[2.3,1.7],[3,1.3],[2.4,.7],[1.8,.1],[1.45,-1.2],[.8,-2.5],[.2,-3.4],[-.4,-3.1],[-.9,-1.5],[-1.5,-.4],[-1.5,.5],[-2.4,.8],[-2.9,1.7]];
     const s = new THREE.Shape();coords.forEach(([x,y],i) => i ? s.lineTo(x,y) : s.moveTo(x,y));s.closePath();return s;
   }, []);
   const points = useMemo(() => {
     const pts: number[] = []; const poly = shape.getPoints();
     for (let y=-3.5;y<3.65;y+=.095) for(let x=-3;x<3.1;x+=.095) {
-      let inside=false; for(let i=0,j=poly.length-1;i<poly.length;j=i++) { const a=poly[i],b=poly[j];if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)inside=!inside; }
+      let inside=false; for(let i=0,j=poly.length-1;i<poly.length;j=i++) { const a=poly[i],b=poly[j];if(!a || !b) continue;if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)inside=!inside; }
       if(inside)pts.push(x,y,.10*Math.sin(x*3+y*2));
     }return new Float32Array(pts);
   }, [shape]);

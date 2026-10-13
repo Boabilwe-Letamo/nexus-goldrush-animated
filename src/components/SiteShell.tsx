@@ -1,0 +1,17 @@
+import { Link } from '@tanstack/react-router';
+import { useState } from 'react';
+import { ArrowUpRight, Menu, X, ArrowDownToLine } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import logo from '@/assets/nexus-logo.png.asset.json';
+import profile from '@/assets/company-profile.pdf.asset.json';
+
+const links = [{ to: '/' as const, label: 'Home' }, { to: '/about' as const, label: 'Our company' }, { to: '/solutions' as const, label: 'Our solutions' }, { to: '/leadership' as const, label: 'Leadership' }, { to: '/sustainability' as const, label: 'Sustainability' }];
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+  return <header className="site-header"><div className="header-inner"><Link to="/" aria-label="Nexus Logistica home"><img className="brand-logo" src={logo.url} alt="Nexus Logistica — Logistics Excellence" width="1344" height="268" /></Link><nav className="desktop-nav" aria-label="Main navigation">{links.map(link => <Link key={link.to} to={link.to} activeProps={{ className: 'nav-active' }} activeOptions={{ exact: true }}>{link.label}</Link>)}</nav><Button asChild variant="gold" className="header-contact"><Link to="/contact">Let’s connect <ArrowUpRight /></Link></Button><Button className="mobile-menu-button" variant="ghost" size="icon" onClick={() => setOpen(!open)} aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open}>{open ? <X /> : <Menu />}</Button></div>{open && <nav className="mobile-nav" aria-label="Mobile navigation">{[...links, { to: '/contact' as const, label: 'Let’s connect' }].map(link => <Link to={link.to} key={link.to} onClick={() => setOpen(false)}>{link.label}<ArrowUpRight size={16} /></Link>)}</nav>}</header>;
+}
+export function ProfileLink() { return <a className="text-action" href={profile.url} target="_blank" rel="noreferrer">Company profile <ArrowDownToLine size={16} /></a>; }
+export function SiteFooter() {
+  return <footer className="site-footer"><div className="container footer-top"><div><Link to="/"><img className="brand-logo" src={logo.url} alt="Nexus Logistica" width="1344" height="268" loading="lazy" /></Link><p>Rooted in Botswana. Connected to Africa.<br />Thinking way beyond borders.</p></div><div><span className="eyebrow">Explore</span>{links.slice(1).map(link => <Link key={link.to} to={link.to}>{link.label}</Link>)}</div><div><span className="eyebrow">Get in touch</span><a href="mailto:Nelson@nexuslogistica.info">Nelson@nexuslogistica.info</a><p>Plot 1356, Lenganeng<br />Tlokweng, Botswana</p><ProfileLink /></div></div><div className="container footer-bottom"><span>© 2026 Nexus Logistica Proprietary Limited</span><span>UIN: BW00009408327</span><span>Logistics Excellence.</span></div></footer>;
+}
+export function ContactBand() { return <section className="contact-band"><div className="container"><div><span className="eyebrow">The next move is yours</span><h2>Let’s move forward.<br /><span className="text-primary">Together.</span></h2></div><Button asChild variant="gold" size="lg"><Link to="/contact">Start a conversation <ArrowUpRight /></Link></Button></div></section>; }

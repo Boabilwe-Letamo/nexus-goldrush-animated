@@ -2,8 +2,8 @@ import { Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import { ArrowUpRight, Menu, X, ArrowDownToLine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/nexus-logo.png.asset.json';
-import profile from '@/assets/company-profile.pdf.asset.json';
+const logo = { url: '/nexus-logo.png' };
+const profile = { url: '/company-profile.pdf' };
 
 const links = [{ to: '/' as const, label: 'Home' }, { to: '/about' as const, label: 'Our company' }, { to: '/solutions' as const, label: 'Our solutions' }, { to: '/leadership' as const, label: 'Leadership' }, { to: '/sustainability' as const, label: 'Sustainability' }];
 export function SiteHeader() {

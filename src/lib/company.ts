@@ -1,8 +1,8 @@
-import ceo from '@/assets/ceo.png.asset.json';
-import coo from '@/assets/coo.jpeg.asset.json';
-import cco from '@/assets/cco.png.asset.json';
-import mining from '@/assets/mining-logistics.jpeg.asset.json';
-import fleet from '@/assets/logistics-fleet.jpeg.asset.json';
+const ceo = { url: '/ceo.png' };
+const coo = { url: '/coo.jpeg' };
+const cco = { url: '/cco.png' };
+const mining = { url: '/mining-logistics.jpeg' };
+const fleet = { url: '/logistics-fleet.jpeg' };
 import { Truck, FileCheck2, Pickaxe, Leaf } from 'lucide-react';
 
 export const solutions = [

@@ -2,6 +2,7 @@ import { Link } from '@tanstack/react-router';
 import { useState } from 'react';
 import { ArrowUpRight, Menu, X, ArrowDownToLine } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { partners } from '@/lib/company';
 const logo = { url: '/nexus-logo.png' };
 const profile = { url: '/company-profile.pdf' };
 
@@ -12,6 +13,6 @@ export function SiteHeader() {
 }
 export function ProfileLink() { return <a className="text-action" href={profile.url} target="_blank" rel="noreferrer">Company profile <ArrowDownToLine size={16} /></a>; }
 export function SiteFooter() {
-  return <footer className="site-footer"><div className="container footer-top"><div><Link to="/"><img className="brand-logo" src={logo.url} alt="Nexus Logistica" width="1344" height="268" loading="lazy" /></Link><p>Rooted in Botswana. Connected to Africa.<br />Thinking way beyond borders.</p></div><div><span className="eyebrow">Explore</span>{links.slice(1).map(link => <Link key={link.to} to={link.to}>{link.label}</Link>)}</div><div><span className="eyebrow">Get in touch</span><a href="mailto:danica@nexuslogistica.info">danica@nexuslogistica.info</a><a href="mailto:jessica@nexuslogistica.info">jessica@nexuslogistica.info</a><p>Plot 1356, Lenganeng<br />Tlokweng, Botswana</p><ProfileLink /></div></div><div className="container footer-bottom"><span>© 2026 Nexus Logistica Proprietary Limited</span><span>UIN: BW00009408327</span><span>Logistics Excellence.</span></div></footer>;
+  return <footer className="site-footer"><div className="container partner-strip"><span className="eyebrow">Our partners</span><ul className="partner-logos">{partners.map(partner => <li key={partner.name}><img src={partner.image} alt={partner.name} loading="lazy" /><span>{partner.name}</span></li>)}</ul></div><div className="container footer-top"><div><Link to="/"><img className="brand-logo" src={logo.url} alt="Nexus Logistica" width="1344" height="268" loading="lazy" /></Link><p>Rooted in Botswana. Connected to Africa.<br />Thinking way beyond borders.</p></div><div><span className="eyebrow">Explore</span>{links.slice(1).map(link => <Link key={link.to} to={link.to}>{link.label}</Link>)}</div><div><span className="eyebrow">Get in touch</span><a href="mailto:danica@nexuslogistica.info">danica@nexuslogistica.info</a><a href="mailto:jessica@nexuslogistica.info">jessica@nexuslogistica.info</a><p>Plot 1356, Lenganeng<br />Tlokweng, Botswana</p><ProfileLink /></div></div><div className="container footer-bottom"><span>© 2026 Nexus Logistica Proprietary Limited</span><span>UIN: BW00009408327</span><span>Logistics Excellence.</span></div></footer>;
 }
 export function ContactBand() { return <section className="contact-band"><div className="container"><div><span className="eyebrow">The next move is yours</span><h2>Let’s move forward.<br /><span className="text-primary">Together.</span></h2></div><Button asChild variant="gold" size="lg"><Link to="/contact">Start a conversation <ArrowUpRight /></Link></Button></div></section>; }

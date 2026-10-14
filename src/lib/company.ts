@@ -17,9 +17,9 @@ export const leaders = [
   { name: 'Nelson Molefhe', role: 'Chief Commercial Officer', short: 'CCO', image: cco.url, description: 'Nelson leads buyer acquisition, commodity brokerage, strategic partnerships, and transaction development. His commercial network connects operational capacity to sustained regional trade volume.' },
 ];
 export const partners = [
-  { name: 'Royal Heritage Projects', image: '/partner-royal-heritage.png' },
-  { name: 'Ankh Group', image: '/partner-ankh-group.png' },
-  { name: 'Afrocore Commodities', image: '/partner-afrocore.png' },
+  { name: 'Royal Heritage Projects', image: '/partner-royal-heritage.png', caption: false },
+  { name: 'Ankh Group', image: '/partner-ankh-group.png', caption: true },
+  { name: 'Afrocore Commodities', image: '/partner-afrocore.png', caption: true },
 ];
 export function pageHead(title: string, description: string) {
   return { meta: [{ title: `${title} | Nexus Logistica` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | Nexus Logistica` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] };

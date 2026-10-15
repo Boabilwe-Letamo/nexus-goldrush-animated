@@ -4,3 +4,4 @@
 - [x] Integrate supplied logo, leadership photos, and profile download.
 - [x] Add animated 3D trade network and verify desktop/mobile navigation.
 - [x] Add Danica Freitag (Executive Assistant to the CEO) to the team.
+- [x] Add Goisemang Jessica Sizeze (Executive Assistant to the CCO) to the team.

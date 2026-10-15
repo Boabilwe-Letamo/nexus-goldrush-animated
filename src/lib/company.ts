@@ -16,7 +16,8 @@ export const leaders = [
   { name: 'Boabilwe Larona Letamo', role: 'Co-Founder & Chief Executive Officer', short: 'CEO', image: ceo.url, description: 'Boabilwe provides strategic leadership and vision, scaling the company’s continental footprint, forming institutional partnerships, and aligning logistics innovation with national development priorities.' },
   { name: 'Juandré Versfeld', role: 'Co-Founder & Chief Operating Officer', short: 'COO', image: coo.url, description: 'Juandré oversees daily operations, project execution, and systems management. His focus is operational excellence, process discipline, cross-border trade, and regional network growth.' },
   { name: 'Nelson Molefhe', role: 'Chief Commercial Officer', short: 'CCO', image: cco.url, description: 'Nelson leads buyer acquisition, commodity brokerage, strategic partnerships, and transaction development. His commercial network connects operational capacity to sustained regional trade volume.' },
-  { name: 'Danica Freitag', role: 'Executive Assistant to the CEO', short: 'EA', image: ea.url, description: 'Danica supports the Office of the Chief Executive Officer, coordinating the day-to-day priorities that keep the company’s leadership agenda moving.' },
+  { name: 'Danica Freitag', role: 'Executive Assistant to the CEO', short: 'EA·CEO', image: ea.url, description: 'Danica supports the Office of the Chief Executive Officer, coordinating the day-to-day priorities that keep the company’s leadership agenda moving.' },
+  { name: 'Goisemang Jessica Sizeze', role: 'Executive Assistant to the CCO', short: 'EA·CCO', image: '/jessica-sizeze.jpeg', description: 'Goisemang Jessica supports the Office of the Chief Commercial Officer, keeping buyer engagement, partnership pipelines, and commercial administration moving in step.' },
 ];
 export const partners = [
   { name: 'Royal Heritage Projects', image: '/partner-royal-heritage.png', caption: false },

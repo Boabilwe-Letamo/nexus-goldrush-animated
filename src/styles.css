@@ -232,7 +232,7 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .principles-row>div:last-child {border:0;}
 .principles-row h3 {font-size:16px;margin-bottom:8px;font-weight:500;}
 .principles-row p {font-size:13px;color:var(--muted-foreground);}
-.leadership-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+.leadership-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
 .leader-photo {aspect-ratio:4/4.4;overflow:hidden;background:var(--card);position:relative;}
 .leader-photo img {width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(.8);transition:transform .6s,filter .6s;}
 .leader-card:hover img {transform:scale(1.04);filter:saturate(1);}

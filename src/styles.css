@@ -232,14 +232,14 @@ a,button { -webkit-tap-highlight-color: transparent; }
 .principles-row>div:last-child {border:0;}
 .principles-row h3 {font-size:16px;margin-bottom:8px;font-weight:500;}
 .principles-row p {font-size:13px;color:var(--muted-foreground);}
-.leadership-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:28px;}
+.leadership-grid {display:grid;grid-template-columns:repeat(5,1fr);gap:24px;}
 .leader-photo {aspect-ratio:4/4.4;overflow:hidden;background:var(--card);position:relative;}
 .leader-photo img {width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:saturate(.8);transition:transform .6s,filter .6s;}
 .leader-card:hover img {transform:scale(1.04);filter:saturate(1);}
 .leader-photo>span {position:absolute;bottom:16px;left:16px;padding:4px 12px;background:var(--primary);color:var(--primary-foreground);font-size:11px;font-weight:600;}
-.leader-card h3 {margin-top:21px;font-size:20px;font-weight:500;}
-.leader-card .role {color:var(--primary);font-size:12px;margin-top:7px;}
-.leader-card .bio {color:var(--muted-foreground);font-size:14px;margin-top:18px;line-height:1.8;}
+.leader-card h3 {margin-top:18px;font-size:17px;font-weight:500;line-height:1.35;}
+.leader-card .role {color:var(--primary);font-size:11px;margin-top:7px;letter-spacing:.3px;}
+.leader-card .bio {color:var(--muted-foreground);font-size:13px;margin-top:16px;line-height:1.75;}
 .quote-section {border-block:1px solid var(--border);padding-block:85px;background:var(--card);}
 .quote-section blockquote {font-family:'Manrope',sans-serif;font-size:30px;line-height:1.6;max-width:980px;}
 .quote-section .eyebrow {margin-top:24px;}

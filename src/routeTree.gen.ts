@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LeadershipRouteImport } from './routes/leadership'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SustainabilityRouteImport } from './routes/sustainability'
 
@@ -36,6 +37,11 @@ const LeadershipRoute = LeadershipRouteImport.update({
   path: '/leadership',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/partners': typeof PartnersRoute
   '/solutions': typeof SolutionsRoute
   '/sustainability': typeof SustainabilityRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/partners': typeof PartnersRoute
   '/solutions': typeof SolutionsRoute
   '/sustainability': typeof SustainabilityRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/leadership': typeof LeadershipRoute
+  '/partners': typeof PartnersRoute
   '/solutions': typeof SolutionsRoute
   '/sustainability': typeof SustainabilityRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/leadership'
+    | '/partners'
     | '/solutions'
     | '/sustainability'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/leadership'
+    | '/partners'
     | '/solutions'
     | '/sustainability'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/leadership'
+    | '/partners'
     | '/solutions'
     | '/sustainability'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   LeadershipRoute: typeof LeadershipRoute
+  PartnersRoute: typeof PartnersRoute
   SolutionsRoute: typeof SolutionsRoute
   SustainabilityRoute: typeof SustainabilityRoute
 }
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LeadershipRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solutions': {
       id: '/solutions'
       path: '/solutions'
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   LeadershipRoute: LeadershipRoute,
+  PartnersRoute: PartnersRoute,
   SolutionsRoute: SolutionsRoute,
   SustainabilityRoute: SustainabilityRoute,
 }

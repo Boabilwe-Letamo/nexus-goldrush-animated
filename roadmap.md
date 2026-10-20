@@ -1,4 +1,5 @@
 # Nexus Logistica website
+- [x] Add Our Partners page with supplied descriptions, existing logos and Ankh subsidiary grouping; verify navigation and layout.
 - [x] Create black-and-gold design and home page.
 - [x] Add company, solutions, leadership, sustainability, and contact pages from the profile.
 - [x] Integrate supplied logo, leadership photos, and profile download.

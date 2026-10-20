@@ -24,6 +24,21 @@ export const partners = [
   { name: 'Ankh Group', image: '/partner-ankh-group.png', caption: true },
   { name: 'Afrocore Commodities', image: '/partner-afrocore.png', caption: true },
 ];
+export const partnerIntroduction = 'At Nexus Logistica, we believe strong results come from strong relationships. We work alongside trusted partners across logistics, finance, media, recruitment and sustainability, which lets us deliver more value, with greater reach and reliability, to every client we serve.';
+export const partnerProfiles = [
+  {
+    name: 'Ankh Group', image: '/partner-ankh-group.png', category: 'Diversified capabilities',
+    description: 'Ankh Group is a diversified group of companies whose subsidiaries cover logistics, finance, media and environmental sustainability. Together they form a strong network of capability behind the work we do.',
+    subsidiaries: [
+      { name: 'Ankh Distributors', category: 'Logistics & distribution', description: 'Ankh Distributors is the group’s logistics and distribution arm. It moves and supplies general commodities and goods, and it provides trucks and heavy-duty equipment, along with a wide range of supplies for industry and commerce. Its reach and operational strength support the reliable movement of goods across the region.' },
+      { name: 'Ankh Wealth', category: 'Finance & commerce', description: 'Ankh Wealth brings financial and commercial expertise to the group. It specialises in power brokerage and mediation, finance and consultancy, and it trades in gold, diamonds and other commodities. Its experience in structuring and facilitating complex transactions makes it a valuable partner on large-scale projects.' },
+      { name: 'Ankh Reflections', category: 'Creative & digital', description: 'Ankh Reflections is the group’s creative and digital house. It offers media, advertising and marketing, arts and entertainment, and app and website development, as well as hosting. From brand storytelling to digital infrastructure, it helps businesses connect with their audiences.' },
+      { name: 'Black Whole Waste Management', category: 'Environmental sustainability', description: 'Black Whole Waste Management is committed to turning waste into opportunity. It focuses on recycling, manufacturing through waste and generating energy through waste, with the aim of revitalising the eco-system and building a cleaner, more sustainable future.' },
+    ],
+  },
+  { name: 'Royal Heritage Projects', image: '/partner-royal-heritage.png', category: 'Consulting & organisational systems', description: 'Royal Heritage Projects is our trusted consulting partner for recruitment and organisational systems. They advise us on recruitment and help us develop our Standard Operating Procedures (SOPs), procurement processes and procedures, tendering processes and recruitment procedures. They also support us with the procurement of our office supplies. Their guidance helps us keep Nexus Logistica structured, compliant and efficient as we grow.', subsidiaries: [] },
+  { name: 'Forerunner Edge', image: undefined, category: 'Media & brand communications', description: 'Forerunner Edge is our media partner. They help us tell the Nexus Logistica story, supporting us with media for our website, our advertising and other brand communications. Their creative and technical skills keep our public presence professional, consistent and engaging.', subsidiaries: [] },
+];
 export function pageHead(title: string, description: string) {
   return { meta: [{ title: `${title} | Nexus Logistica` }, { name: 'description', content: description }, { property: 'og:title', content: `${title} | Nexus Logistica` }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] };
 }

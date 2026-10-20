@@ -3,7 +3,7 @@ import { ContactBand } from '@/components/SiteShell';
 import { pageHead, partnerIntroduction, partnerProfiles } from '@/lib/company';
 
 export const Route = createFileRoute('/partners')({
-  head: () => pageHead('Our Partners', 'Meet Nexus Logistica’s partners: Ankh Group and its four subsidiaries, Royal Heritage Projects, and Forerunner Edge.'),
+  head: () => pageHead('Our Partners', 'Meet Nexus Logistica’s partners: Ankh Group and its four subsidiaries, Royal Heritage Projects, Afrocore Commodities, and Forerunner Edge.'),
   component: Partners,
 });
 

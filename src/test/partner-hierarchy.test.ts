@@ -9,4 +9,13 @@ describe('Partner company hierarchy', () => {
       expect(partnerProfiles.map(partner => partner.name)).not.toContain(name);
     });
   }
+
+  it('Afrocore Commodities is its own partner, listed for commodity movement in Zimbabwe', () => {
+    const afrocore = partnerProfiles.find(partner => partner.name === 'Afrocore Commodities');
+    expect(afrocore?.category).toContain('Commodities');
+    expect(afrocore?.description).toContain('Zimbabwe');
+    expect(afrocore?.image).toBe('/partner-afrocore.png');
+    const group = partnerProfiles.find(partner => partner.name === 'Ankh Group');
+    expect(group?.subsidiaries.map(company => company.name)).not.toContain('Afrocore Commodities');
+  });
 });

@@ -5,4 +5,4 @@
 - [x] Add animated 3D trade network and verify desktop/mobile navigation.
 - [x] Add Danica Freitag (Executive Assistant to the CEO) to the team.
 - [x] Add Goisemang Jessica Sizeze (Executive Assistant to the CCO) to the team.
-- [ ] Center Jessica’s portrait, preserve Boabilwe’s head, and center both EAs beneath the three officers on both team displays.
+- [x] Center Jessica’s portrait, preserve Boabilwe’s head, and center both EAs beneath the three officers on both team displays.

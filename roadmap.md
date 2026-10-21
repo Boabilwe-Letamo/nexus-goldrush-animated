@@ -9,3 +9,5 @@
 - [x] Add Danica Freitag (Executive Assistant to the CEO) to the team.
 - [x] Add Goisemang Jessica Sizeze (Executive Assistant to the CCO) to the team.
 - [x] Center Jessica’s portrait, preserve Boabilwe’s head, and center both EAs beneath the three officers on both team displays.
+- [x] Add Forerunner Edge to the footer partner strip and make every footer partner open its own section on the Our Partners page.
+- [x] List the CCO’s executive assistant as Jessica Sizeze, without the first name Goisemang.

@@ -1,5 +1,5 @@
 # Nexus Logistica website
-- [ ] Add the Forerunner Edge logo to the Our Partners page and make it read on the dark background.
+- [x] Add the Forerunner Edge logo to the Our Partners page and make it read on the dark background.
 - [x] Add Afrocore Commodities to the Our Partners page with its supplied description and existing logo.
 - [x] Add Our Partners page with supplied descriptions, existing logos and Ankh subsidiary grouping; verify navigation and layout.
 - [x] Create black-and-gold design and home page.

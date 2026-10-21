@@ -11,3 +11,4 @@
 - [x] Center Jessica’s portrait, preserve Boabilwe’s head, and center both EAs beneath the three officers on both team displays.
 - [x] Add Forerunner Edge to the footer partner strip and make every footer partner open its own section on the Our Partners page.
 - [x] List the CCO’s executive assistant as Jessica Sizeze, without the first name Goisemang.
+- [x] Show the Forerunner Edge mark in gold, matching the other partner marks.

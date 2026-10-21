@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { partnerProfiles } from '@/lib/company';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 
 describe('Partner company hierarchy', () => {
   for (const name of ['Ankh Wealth', 'Ankh Distributors', 'Ankh Reflections', 'Black Whole Waste Management']) {
@@ -17,5 +19,13 @@ describe('Partner company hierarchy', () => {
     expect(afrocore?.image).toBe('/partner-afrocore.png');
     const group = partnerProfiles.find(partner => partner.name === 'Ankh Group');
     expect(group?.subsidiaries.map(company => company.name)).not.toContain('Afrocore Commodities');
+  });
+
+  it('every partner shows a logo file that ships with the site', () => {
+    for (const partner of partnerProfiles) {
+      const image = partner.image;
+      expect(image, `${partner.name} has no logo`).toBeTruthy();
+      expect(existsSync(join(process.cwd(), 'public', (image ?? '').replace(/^\//, ''))), `${partner.name} logo file missing`).toBe(true);
+    }
   });
 });

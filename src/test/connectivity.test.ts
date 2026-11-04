@@ -20,7 +20,7 @@ describe('Home page Africa interconnectivity section', () => {
   });
 
   it('is wired into the home route', () => {
-    const source = readFileSync(fileURLToPath(new URL('../routes/index.tsx', import.meta.url)), 'utf8');
+    const source = readFileSync(join(process.cwd(), 'src/routes/index.tsx'), 'utf8');
     expect(source).toMatch(/import \{[^}]*connectivity[^}]*\} from '@\/lib\/company'/);
     expect(source).toContain('id="interconnectivity"');
     expect(source).toContain('connectivity.corridors');

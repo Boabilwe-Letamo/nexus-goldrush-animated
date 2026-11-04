@@ -3,13 +3,13 @@ import { lazy, Suspense } from 'react';
 import { ArrowUpRight, ArrowDown, ArrowRight, MoveRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ContactBand, ProfileLink } from '@/components/SiteShell';
-import { leaders, solutions, pageHead } from '@/lib/company';
+import { connectivity, leaders, solutions, pageHead } from '@/lib/company';
 import hero from '@/assets/freight-hero.jpg';
 const TradeNetwork = lazy(() => import('@/components/TradeNetwork'));
 const HeroFlow = lazy(() => import('@/components/HeroFlow'));
 
 export const Route = createFileRoute('/')({
-  head: () => pageHead('Beyond Borders', 'Nexus Logistica moves Africa’s resources beyond borders through integrated logistics, trade facilitation, and sustainable supply chains.'),
+  head: () => pageHead('Beyond Borders', 'Nexus Logistica moves Africa’s resources beyond borders through integrated logistics, trade facilitation, and sustainable supply chains — connecting African markets to each other, and to the world.'),
   component: Index,
 });
 function Index() {

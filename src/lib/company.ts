@@ -14,7 +14,6 @@ export const solutions = [
 ];
 export const connectivity = {
   eyebrow: 'Africa’s interconnectivity',
-  heading: 'One continent.<br />Connected by movement.',
   body: 'Africa’s growth depends on how freely goods, capital and information cross its borders. We work the corridors that make that possible — road and rail links, ports and inland terminals, border posts, and the documentation and digital systems behind them — so that a shipment begun in Botswana can reach a market anywhere on the continent, or beyond it, without losing days at a crossing.',
   note: 'Regional trade is tightening: the African Continental Free Trade Area is opening routes between markets that once traded almost entirely outward. For the continent, interconnectivity is no longer a promise — it is the operating environment we build for.',
   connectors: ['Ports & terminals', 'Road & rail', 'Air freight', 'Border posts', 'Customs data', 'Minerals & energy'],

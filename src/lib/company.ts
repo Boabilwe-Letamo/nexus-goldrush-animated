@@ -12,6 +12,19 @@ export const solutions = [
   { title: 'Mining & industrial', number: '03', icon: Pickaxe, description: 'Purpose-built mine-to-market pathways for Africa’s resources and industrial supply chains.', detail: 'Specialist support for Botswana’s extractive industries, with mine-to-market logistics pathways, bulk transport consulting, and audit integrity.', image: mining.url },
   { title: 'Sustainable supply chains', number: '04', icon: Leaf, description: 'Carbon-conscious routing and responsible operations that create long-term value.', detail: 'Technology-driven supply chain optimisation supported by carbon-conscious routing, community integration, fair employment, and transparent reporting.', image: mining.url },
 ];
+export const connectivity = {
+  eyebrow: 'Africa’s interconnectivity',
+  body: 'Africa’s growth depends on how freely goods, capital and information cross its borders. We work the corridors that make that possible — road and rail links, ports and inland terminals, border posts, and the documentation and digital systems behind them — so that a shipment begun in Botswana can reach a market anywhere on the continent, or beyond it, without losing days at a crossing.',
+  note: 'Regional trade is tightening: the African Continental Free Trade Area is opening routes between markets that once traded almost entirely outward. For the continent, interconnectivity is no longer a promise — it is the operating environment we build for.',
+  connectors: ['Ports & terminals', 'Road & rail', 'Air freight', 'Border posts', 'Customs data', 'Minerals & energy'],
+  corridors: [
+    { name: 'North–South Corridor', line: 'Zambia · DRC · Zimbabwe · Botswana · South Africa', detail: 'Minerals and freight moving between the Copperbelt and the southern ports.' },
+    { name: 'Durban–Gauteng', line: 'KwaZulu-Natal · Gauteng', detail: 'The container backbone between the region’s busiest port and its industrial heartland.' },
+    { name: 'Beira Corridor', line: 'Mozambique · Zimbabwe', detail: 'A short eastern sea route for landlocked neighbours.' },
+    { name: 'Walvis Bay Corridor', line: 'Namibia · Zambia · DRC', detail: 'Copper and mining cargo reaching the Atlantic in fewer days.' },
+    { name: 'Kazungula', line: 'Botswana · Zambia · Zimbabwe · Namibia', detail: 'One crossing where four economies meet — the point that binds the region together.' },
+  ],
+};
 export const leaders = [
   { name: 'Boabilwe Larona Letamo', role: 'Co-Founder & Chief Executive Officer', short: 'CEO', image: ceo.url, description: 'Boabilwe provides strategic leadership and vision, scaling the company’s continental footprint, forming institutional partnerships, and aligning logistics innovation with national development priorities.' },
   { name: 'Juandré Versfeld', role: 'Co-Founder & Chief Operating Officer', short: 'COO', image: coo.url, description: 'Juandré oversees daily operations, project execution, and systems management. His focus is operational excellence, process discipline, cross-border trade, and regional network growth.' },

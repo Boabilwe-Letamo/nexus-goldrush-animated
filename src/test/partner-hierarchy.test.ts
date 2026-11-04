@@ -12,13 +12,13 @@ describe('Partner company hierarchy', () => {
     });
   }
 
-  it('Afrocore Commodities is its own partner, listed for commodity movement in Zimbabwe', () => {
-    const afrocore = partnerProfiles.find(partner => partner.name === 'Afrocore Commodities');
-    expect(afrocore?.category).toContain('Commodities');
-    expect(afrocore?.description).toContain('Zimbabwe');
-    expect(afrocore?.image).toBe('/partner-afrocore.png');
+  it('Orenza Commodities is its own partner, listed for commodity movement in Zimbabwe', () => {
+    const orenza = partnerProfiles.find(partner => partner.name === 'Orenza Commodities');
+    expect(orenza?.category).toContain('Commodities');
+    expect(orenza?.description).toContain('Zimbabwe');
+    expect(orenza?.image).toBe('/partner-afrocore.png');
     const group = partnerProfiles.find(partner => partner.name === 'Ankh Group');
-    expect(group?.subsidiaries.map(company => company.name)).not.toContain('Afrocore Commodities');
+    expect(group?.subsidiaries.map(company => company.name)).not.toContain('Orenza Commodities');
   });
 
   it('every partner shows a logo file that ships with the site', () => {

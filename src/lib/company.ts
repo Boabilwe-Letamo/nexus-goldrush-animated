@@ -35,7 +35,7 @@ export const leaders = [
 export const partners = [
   { name: 'Royal Heritage Projects', image: '/partner-royal-heritage.png', caption: false, slug: 'royal-heritage-projects' },
   { name: 'Ankh Group', image: '/partner-ankh-group.png', caption: true, slug: 'ankh-group' },
-  { name: 'Afrocore Commodities', image: '/partner-afrocore.png', caption: true, slug: 'afrocore-commodities' },
+  { name: 'Orenza Commodities', image: '/partner-afrocore.png', caption: true, slug: 'orenza-commodities' },
   { name: 'Forerunner Edge', image: '/forerunner-edge.png', caption: true, slug: 'forerunner-edge' },
 ];
 export const partnerIntroduction = 'At Nexus Logistica, we believe strong results come from strong relationships. We work alongside trusted partners across logistics, finance, media, recruitment and sustainability, which lets us deliver more value, with greater reach and reliability, to every client we serve.';
@@ -51,7 +51,7 @@ export const partnerProfiles = [
     ],
   },
   { name: 'Royal Heritage Projects', slug: 'royal-heritage-projects', image: '/partner-royal-heritage.png', category: 'Consulting & organisational systems', description: 'Royal Heritage Projects is our trusted consulting partner for recruitment and organisational systems. They advise us on recruitment and help us develop our Standard Operating Procedures (SOPs), procurement processes and procedures, tendering processes and recruitment procedures. They also support us with the procurement of our office supplies. Their guidance helps us keep Nexus Logistica structured, compliant and efficient as we grow.', subsidiaries: [] },
-  { name: 'Afrocore Commodities', slug: 'afrocore-commodities', image: '/partner-afrocore.png', category: 'Commodities & in-country logistics', description: 'Afrocore Commodities is our trusted partner for moving commodities within Zimbabwe. Their local knowledge and operational capability keep goods moving reliably across the country. They complement our wider logistics network by handling the in-country leg of commodity movement, so our clients’ cargo reaches its destination efficiently.', subsidiaries: [] },
+  { name: 'Orenza Commodities', slug: 'orenza-commodities', image: '/partner-afrocore.png', category: 'Commodities & in-country logistics', description: 'Orenza Commodities is our trusted partner for moving commodities within Zimbabwe. Their local knowledge and operational capability keep goods moving reliably across the country. They complement our wider logistics network by handling the in-country leg of commodity movement, so our clients’ cargo reaches its destination efficiently.', subsidiaries: [] },
   { name: 'Forerunner Edge', slug: 'forerunner-edge', image: '/forerunner-edge.png', category: 'Media & brand communications', description: 'Forerunner Edge is our media partner. They help us tell the Nexus Logistica story, supporting us with media for our website, our advertising and other brand communications. Their creative and technical skills keep our public presence professional, consistent and engaging.', subsidiaries: [] },
 ];
 export function pageHead(title: string, description: string) {
